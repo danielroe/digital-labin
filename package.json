@@ -3,6 +3,19 @@
   "author": "Daniel Roe <daniel@roe.dev>",
   "license": "MIT",
   "version": "1.0.0",
-  "scripts": {},
-  "dependencies": {}
+  "scripts": {
+    "dev": "./bin/cli.mjs dev",
+    "build": "./bin/cli.mjs build"
+  },
+  "dependencies": {
+    "@picocss/pico": "^1.5.10",
+    "@vitejs/plugin-vue": "^4.3.4",
+    "c12": "^1.4.2",
+    "citty": "^0.1.4",
+    "h3": "^1.8.1",
+    "nitropack": "^2.6.3",
+    "rollup-plugin-vue": "^6.0.0",
+    "vite": "^4.4.9",
+    "vue": "^3.3.4"
+  }
 }
