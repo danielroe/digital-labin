@@ -9,6 +9,7 @@ import {
   createNitro,
   prepare,
   prerender,
+  writeTypes,
 } from 'nitropack'
 import { defineNitroConfig } from 'nitropack/config'
 import { loadConfig } from 'c12'
@@ -104,6 +105,7 @@ runMain(
           })
           const nitro = await createNitro(config)
           await prepare(nitro)
+          await writeTypes(nitro)
           await buildVite(defaultViteConfig)
           const template = await nitro.storage.getItem('build:client:index.html')
           await nitro.storage.setItem('templates:index.html', template)
